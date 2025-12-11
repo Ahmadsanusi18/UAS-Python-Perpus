@@ -14,16 +14,24 @@ Proyek ini dirancang memenuhi seluruh ketentuan:
 
 ##🚀 Cara Menjalankan Proyek
 1. Clone atau Download Project
-git clone <repo-kamu>
+**Clone repository ini**
+   ```bash
+   git clone https://github.com/Ahmadsanusi18/UAS-Python-Perpus.git
+   cd UAS-Python-Perpus
+   ```
 
 2. Install Virtual Environment (Opsional)
-python -m venv venv
-
-3. Install Dependencies
-pip install flask
-
-4. Jalankan Aplikasi
-python run.py
+    ```bash
+    python -m venv venv
+   ```
+4. Install Dependencies
+   ```bash
+    pip install flask
+   ```
+5. Jalankan Aplikasi
+      ```bash
+    python run.py
+   ```
 
 Aplikasi dapat dibuka di: http://127.0.0.1:5000
 
