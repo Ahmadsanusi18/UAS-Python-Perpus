@@ -57,7 +57,7 @@ Tampilan antarmuka Sistem Manajemen Perpustakaan:
 ## Screenshot OOP 
 | Screenshot | 
 |-----------|
-<img src="img/OOP.png" width="400">
+| <img src="img/OOP.png" width="400"> |
 
 
 ## Screenshot Perulangan dan Percabangan
@@ -67,9 +67,9 @@ Tampilan antarmuka Sistem Manajemen Perpustakaan:
 
 
 
-## Screenshot Modul Package
+## Screenshot Modul & Package
 | Screenshot | 
 |-----------|
-<img src="img/modul.png" width="400">
+| <img src="img/modul.png" width="400"> |
 
 
