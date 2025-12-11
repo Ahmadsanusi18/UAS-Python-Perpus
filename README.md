@@ -3,12 +3,12 @@
 Sistem Manajemen Perpustakaan berbasis Python, menggunakan Flask sebagai backend web framework, serta SQLite sebagai database.
 Proyek ini dirancang memenuhi seluruh ketentuan:
 
-✔ Menggunakan Database (SQLite)
-✔ Menggunakan OOP (Object-Oriented Programming)
-✔ Menggunakan Modul & Package
-✔ Menggunakan Percabangan (if-else)
-✔ Menggunakan Perulangan (for)
-✔ Dapat dijalankan sebagai Web App
+- Menggunakan Database (SQLite) ✔
+- Menggunakan OOP (Object-Oriented Programming) ✔
+- Menggunakan Modul & Package ✔
+- Menggunakan Percabangan (if-else) ✔
+- Menggunakan Perulangan (for) ✔
+- Dapat dijalankan sebagai Web App ✔
 
 
 
