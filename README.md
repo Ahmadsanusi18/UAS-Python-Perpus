@@ -35,7 +35,6 @@ Proyek ini dirancang memenuhi seluruh ketentuan:
 
 Aplikasi dapat dibuka di: http://127.0.0.1:5000
 
-=================================
 ## 📸 Screenshot Aplikasi
 
 Tampilan antarmuka Sistem Manajemen Perpustakaan:
