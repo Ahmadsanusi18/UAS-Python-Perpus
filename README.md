@@ -48,8 +48,10 @@ Tampilan antarmuka Sistem Manajemen Perpustakaan:
 
 
 ## Screenshot Struktur Database dan isi Tabel database
-<img src="img/DATABASE.png" width="400">
-<img src="img/tabel.png" width="400">
+| Screenshot | Screenshot |
+|-----------|------------|
+| <img src="img/DATABASE.png" width="400"> | <img src="img/tabel.png" width="400"> |
+
 
 
 ## Screenshot OOP 
