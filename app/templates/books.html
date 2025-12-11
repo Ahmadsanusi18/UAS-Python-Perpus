@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="mt-10 p-4 sm:p-0">
+    
+    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-8 pb-4 border-b border-gray-700">
+        <h2 class="text-3xl font-extrabold text-white mb-4 sm:mb-0">
+            <i class="fa-solid fa-list-ul text-purple-400 mr-3"></i> Koleksi Buku Perpustakaan
+        </h2>
+        
+        <a href="{{ url_for('main.add_book') }}" 
+           class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-5 rounded-xl shadow-lg shadow-purple-500/30 
+                  transition duration-300 transform hover:scale-[1.01] flex items-center justify-center gap-2">
+            <i class="fa-solid fa-book-medical"></i> Tambah Buku Baru
+        </a>
+    </div>
+
+    <div class="overflow-x-auto bg-gray-800 rounded-2xl shadow-2xl border border-gray-700">
+        <table class="min-w-full divide-y divide-gray-700">
+            
+            <thead class="bg-gray-700/70">
+                <tr>
+                    <th class="px-6 py-3 text-left text-xs font-bold text-gray-300 uppercase tracking-wider w-1/12">ID</th>
+                    <th class="px-6 py-3 text-left text-xs font-bold text-gray-300 uppercase tracking-wider w-4/12">Judul Buku</th>
+                    <th class="px-6 py-3 text-left text-xs font-bold text-gray-300 uppercase tracking-wider w-3/12">Pengarang</th>
+                    <th class="px-6 py-3 text-center text-xs font-bold text-gray-300 uppercase tracking-wider w-1/12">Tahun</th>
+                    <th class="px-6 py-3 text-center text-xs font-bold text-gray-300 uppercase tracking-wider w-2/12">Dipinjam (Qty)</th>
+                </tr>
+            </thead>
+            
+            <tbody class="divide-y divide-gray-700/50">
+                {% for book in books %}
+                <tr class="text-sm text-gray-300 hover:bg-gray-700/70 transition duration-150 ease-in-out cursor-pointer">
+                    <td class="px-6 py-4 whitespace-nowrap font-semibold text-purple-400">{{ book['id'] }}</td>
+                    <td class="px-6 py-4 whitespace-normal font-medium text-white">{{ book['title'] }}</td>
+                    <td class="px-6 py-4 whitespace-nowrap">{{ book['author'] }}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-center text-gray-400">{{ book['year'] }}</td>
+                    
+                    <td class="px-6 py-4 whitespace-nowrap text-center font-bold">
+                        <span class="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-semibold 
+                                     {% if book['borrowed_count'] > 0 %}bg-red-900/50 text-red-300 border border-red-800{% else %}bg-green-900/50 text-green-300 border border-green-800{% endif %}">
+                            <i class="fa-solid {% if book['borrowed_count'] > 0 %}fa-exclamation-circle{% else %}fa-check-circle{% endif %} mr-2"></i>
+                            {{ book['borrowed_count'] }}
+                        </span>
+                    </td>
+                    
+                </tr>
+                {% else %}
+                <tr>
+                    <td colspan="5" class="px-6 py-12 text-center text-lg text-gray-500 bg-gray-700/30">
+                        <i class="fa-solid fa-box-open mr-2"></i> Belum ada koleksi buku yang terdaftar. 
+                        <a href="{{ url_for('main.add_book') }}" class="text-purple-400 hover:underline font-semibold">Tambahkan buku pertama Anda.</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    
+</div>
+
+{% endblock %}

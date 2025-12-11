@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="max-w-md mx-auto mt-10 p-4 sm:p-0">
+    
+    <header class="text-center mb-8">
+        <h2 class="text-4xl font-extrabold text-white leading-tight">
+            <i class="fa-solid fa-book-medical text-purple-400 mr-3"></i> Tambah Buku Baru
+        </h2>
+        <p class="text-gray-400 mt-2">Masukkan detail lengkap buku yang ingin Anda tambahkan.</p>
+    </header>
+
+    <div class="bg-gray-800 p-8 sm:p-10 rounded-2xl shadow-2xl border border-gray-700 transform hover:shadow-purple-500/20 transition duration-300">
+        <form method="POST" class="space-y-6">
+
+            <div>
+                <label for="title" class="block text-sm font-semibold text-gray-300 mb-2">
+                    <i class="fa-solid fa-heading text-purple-400 mr-2"></i> Judul Buku
+                </label>
+                <input type="text" id="title" name="title" required 
+                       class="w-full px-5 py-3 bg-gray-700 border border-gray-600 rounded-xl text-white 
+                              placeholder-gray-500 focus:border-purple-500 focus:ring-2 focus:ring-purple-500 
+                              transition duration-200 shadow-inner" 
+                       placeholder="Masukkan judul buku lengkap">
+            </div>
+
+            <div>
+                <label for="author" class="block text-sm font-semibold text-gray-300 mb-2">
+                    <i class="fa-solid fa-user-edit text-purple-400 mr-2"></i> Pengarang
+                </label>
+                <input type="text" id="author" name="author" required 
+                       class="w-full px-5 py-3 bg-gray-700 border border-gray-600 rounded-xl text-white 
+                              placeholder-gray-500 focus:border-purple-500 focus:ring-2 focus:ring-purple-500 
+                              transition duration-200 shadow-inner" 
+                       placeholder="Nama lengkap pengarang">
+            </div>
+
+            <div>
+                <label for="year" class="block text-sm font-semibold text-gray-300 mb-2">
+                    <i class="fa-solid fa-calendar-alt text-purple-400 mr-2"></i> Tahun Terbit
+                </label>
+                <input type="number" id="year" name="year" required min="1000" max="{{ current_year }}" 
+                       class="w-full px-5 py-3 bg-gray-700 border border-gray-600 rounded-xl text-white 
+                              placeholder-gray-500 focus:border-purple-500 focus:ring-2 focus:ring-purple-500 
+                              transition duration-200 shadow-inner" 
+                       placeholder="Contoh: 2024">
+            </div>
+
+            <button type="submit" 
+                    class="w-full py-3 bg-purple-600 hover:bg-purple-700 text-white font-bold rounded-xl 
+                           shadow-lg shadow-purple-500/30 transition duration-300 ease-in-out 
+                           transform hover:scale-[1.01] flex items-center justify-center gap-3 mt-8">
+                <i class="fa-solid fa-save"></i> Simpan Data Buku
+            </button>
+            
+        </form>
+    </div>
+
+</div>
+
+{% endblock %}

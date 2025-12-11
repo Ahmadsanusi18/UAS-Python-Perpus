@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="max-w-md mx-auto mt-10 p-4 sm:p-0">
+    
+    <header class="text-center mb-8">
+        <h2 class="text-4xl font-extrabold text-white leading-tight">
+            <i class="fa-solid fa-user-plus text-purple-400 mr-3"></i> Tambah Anggota Baru
+        </h2>
+        <p class="text-gray-400 mt-2">Daftarkan anggota baru untuk keanggotaan perpustakaan.</p>
+    </header>
+
+    <div class="bg-gray-800 p-8 sm:p-10 rounded-2xl shadow-2xl border border-gray-700 transform hover:shadow-purple-500/20 transition duration-300">
+        <form method="POST" class="space-y-6">
+
+            <div>
+                <label for="name" class="block text-sm font-semibold text-gray-300 mb-2">
+                    <i class="fa-solid fa-user text-purple-400 mr-2"></i> Nama Anggota
+                </label>
+                <input 
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    required 
+                    class="w-full px-5 py-3 bg-gray-700 border border-gray-600 rounded-xl text-white 
+                           placeholder-gray-500 focus:border-purple-500 focus:ring-2 focus:ring-purple-500 
+                           transition duration-200 shadow-inner" 
+                    placeholder="Masukkan nama lengkap anggota"
+                >
+            </div>
+
+            <div>
+                <label for="email" class="block text-sm font-semibold text-gray-300 mb-2">
+                    <i class="fa-solid fa-envelope text-purple-400 mr-2"></i> Email Anggota
+                </label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    required 
+                    class="w-full px-5 py-3 bg-gray-700 border border-gray-600 rounded-xl text-white 
+                           placeholder-gray-500 focus:border-purple-500 focus:ring-2 focus:ring-purple-500 
+                           transition duration-200 shadow-inner" 
+                    placeholder="nama.anggota@contoh.com"
+                >
+            </div>
+            
+            <button 
+                type="submit" 
+                class="w-full py-3 bg-purple-600 hover:bg-purple-700 text-white font-bold rounded-xl 
+                       shadow-lg shadow-purple-500/30 transition duration-300 ease-in-out 
+                       transform hover:scale-[1.01] flex items-center justify-center gap-3 mt-8"
+            >
+                <i class="fa-solid fa-user-check"></i> Simpan Data Anggota
+            </button>
+            
+        </form>
+    </div>
+    
+</div>
+
+{% endblock %}

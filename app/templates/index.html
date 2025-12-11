@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<header class="p-10 md:p-16 rounded-3xl mb-12 text-center shadow-2xl 
+               bg-gradient-to-br from-purple-700 to-blue-600 border border-purple-500/50">
+    
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-5xl font-extrabold text-white mb-4 leading-tight">
+            <i class="fa-solid fa-graduation-cap mr-3 text-white"></i> Sistem <span class="text-blue-400">Manajemen Perpustakaan</span></span>
+        </h1>
+        
+        <p class="text-xl text-purple-200 opacity-90 max-w-3xl mx-auto mb-8">
+            Akses cepat ke semua modul utama: Kelola koleksi buku, data anggota, dan seluruh transaksi peminjaman Anda.
+        </p>
+
+        <div class="flex flex-col sm:flex-row justify-center gap-4 mt-6">
+            <a href="{{ url_for('main.books') }}" 
+               class="py-3 px-8 bg-white text-gray-900 font-bold rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-[1.03] flex items-center justify-center gap-2">
+                <i class="fa-solid fa-book-open-reader"></i> Lihat Koleksi Buku
+            </a>
+            <a href="{{ url_for('main.loans') }}" 
+   class="py-3 px-8 bg-purple-600 text-white font-bold rounded-xl shadow-lg shadow-purple-500/40 hover:bg-purple-700 transition duration-300 transform hover:scale-[1.03] flex items-center justify-center gap-2">
+    <i class="fa-solid fa-right-left"></i> Kelola Peminjaman
+</a>
+        </div>
+    </div>
+</header>
+
+<section class="mb-16">
+    <h2 class="text-3xl font-extrabold text-white mb-10 text-center pb-3">
+         Fitur Unggulan Sistem
+    </h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto px-4 sm:px-0">
+        
+        <div class="bg-gray-800 border border-gray-700 rounded-2xl p-8 shadow-2xl text-center 
+                    hover:shadow-blue-500/40 hover:border-blue-500 transition duration-300 transform hover:-translate-y-1">
+            <i class="fa-solid fa-database text-6xl text-blue-400 mb-4 opacity-90"></i>
+            <h3 class="text-2xl font-bold text-white mb-2">Data Terpusat</h3>
+            <p class="text-gray-400 mt-3 text-base">Kelola semua data buku, anggota, dan kategori dalam satu basis data yang aman dan terstruktur.</p>
+            <a href="{{ url_for('main.books') }}" 
+               class="mt-6 inline-block text-base font-semibold text-blue-400 hover:text-blue-300 transition border-b border-blue-400/50 hover:border-blue-300/50">
+                Lihat Detail &rarr;
+            </a>
+        </div>
+        
+        <div class="bg-gray-800 border border-gray-700 rounded-2xl p-8 shadow-2xl text-center 
+                    hover:shadow-purple-500/40 hover:border-purple-500 transition duration-300 transform hover:-translate-y-1">
+            <i class="fa-solid fa-clock-rotate-left text-6xl text-purple-400 mb-4 opacity-90"></i>
+            <h3 class="text-2xl font-bold text-white mb-2">Riwayat Transaksi</h3>
+            <p class="text-gray-400 mt-3 text-base">Catat dan pantau riwayat peminjaman dan pengembalian dengan sistem pelacakan waktu nyata.</p>
+            <a href="{{ url_for('main.loans') }}" 
+               class="mt-6 inline-block text-base font-semibold text-purple-400 hover:text-purple-300 transition border-b border-purple-400/50 hover:border-purple-300/50">
+                Lihat Riwayat &rarr;
+            </a>
+        </div>
+        
+        <div class="bg-gray-800 border border-gray-700 rounded-2xl p-8 shadow-2xl text-center 
+                    hover:shadow-blue-500/40 hover:border-blue-500 transition duration-300 transform hover:-translate-y-1">
+            <i class="fa-solid fa-chart-line text-6xl text-blue-400 mb-4 opacity-90"></i>
+            <h3 class="text-2xl font-bold text-white mb-2">Analisis & Laporan</h3>
+            <p class="text-gray-400 mt-3 text-base">Hasilkan laporan otomatis tentang tren peminjaman, anggota teraktif, dan status koleksi.</p>
+            <a href="{{ url_for('main.report') }}" 
+               class="mt-6 inline-block text-base font-semibold text-blue-400 hover:text-blue-300 transition border-b border-blue-400/50 hover:border-blue-300/50">
+                Buat Laporan &rarr;
+            </a>
+        </div>
+        
+    </div>
+</section>
+
+<footer class="p-8 text-center bg-gray-900 border-t border-gray-700 mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-0">
+        <div class="flex flex-col sm:flex-row justify-between items-center">
+            <p class="text-sm text-gray-500 mb-4 sm:mb-0">&copy; 2025 Perpustakaan Digital. Hak Cipta Dilindungi.</p>
+            <div class="flex space-x-6">
+                <a href="#" class="text-sm text-gray-400 hover:text-purple-400 transition">Tentang Kami</a>
+                <span class="text-gray-600">|</span>
+                <a href="#" class="text-sm text-gray-400 hover:text-purple-400 transition">Kebijakan Privasi</a>
+                <span class="text-gray-600">|</span>
+                <a href="#" class="text-sm text-gray-400 hover:text-purple-400 transition">Kontak</a>
+            </div>
+        </div>
+    </div>
+</footer>
+    
+{% endblock %}
