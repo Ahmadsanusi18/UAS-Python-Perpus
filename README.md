@@ -55,15 +55,21 @@ Tampilan antarmuka Sistem Manajemen Perpustakaan:
 
 
 ## Screenshot OOP 
+| Screenshot | 
+|-----------|
 <img src="img/OOP.png" width="400">
 
 
-## Screenshot Perulangan dan Percabangan 
-<img src="img/PERULANGAN RIL.png" width="400">
-<img src="img/PERULANGAN.png" width="400">
+## Screenshot Perulangan dan Percabangan
+| Screenshot | Screenshot |
+|-----------|------------|
+| <img src="img/PERULANGAN RIL.png" width="400"> | <img src="img/PERULANGAN.png" width="400"> |
+
 
 
 ## Screenshot Modul Package
+| Screenshot | 
+|-----------|
 <img src="img/modul.png" width="400">
 
 
