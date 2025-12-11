@@ -1,4 +1,4 @@
-##📚 Library Management System (Python + Flask + SQLite)
+ ## 📚 Library Management System (Python + Flask + SQLite)
 
 Sistem Manajemen Perpustakaan berbasis Python, menggunakan Flask sebagai backend web framework, serta SQLite sebagai database.
 Proyek ini dirancang memenuhi seluruh ketentuan:
