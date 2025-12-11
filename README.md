@@ -12,7 +12,7 @@ Proyek ini dirancang memenuhi seluruh ketentuan:
 
 
 
-##🚀 Cara Menjalankan Proyek
+## 🚀 Cara Menjalankan Proyek
 1. Clone atau Download Project
 **Clone repository ini**
    ```bash
